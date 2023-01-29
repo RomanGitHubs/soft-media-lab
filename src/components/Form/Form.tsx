@@ -23,12 +23,12 @@ export const FormComponent: React.FC<IFormProps> = (props) => {
     change('ndfl', true);
   };
 
-  const arr2 = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const allowNumber = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
   const handleInputAmount = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const value = e.target.value.replace(/\s/g, '');
-    if (!value.split('').every((item: string) => arr2.includes(item))) return;
+    if (!value.split('').every((item: string) => allowNumber.includes(item))) return;
     const num = Number(value);
     change('amount', num.toLocaleString());
   };

@@ -1,4 +1,4 @@
-import { ChangeAction, FormAction, SubmitHandler } from 'redux-form';
+import { ChangeAction, SubmitHandler } from 'redux-form';
 
 type PaymentType = 'month' | 'mrot' | 'day' | 'hour';
 
