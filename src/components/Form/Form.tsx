@@ -30,7 +30,7 @@ export const FormComponent: React.FC<IFormProps> = (props) => {
     const value = e.target.value.replace(/\s/g, '');
     if (!value.split('').every((item: string) => allowNumber.includes(item))) return;
     const num = Number(value);
-    change('amount', num.toLocaleString());
+    change('amount', num.toLocaleString('ru-RU'));
   };
 
   const amountValueTrim = Number(String(amountValue).replace(/\s/g, ''));
