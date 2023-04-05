@@ -1,6 +1,6 @@
 import { formValueSelector, reduxForm } from 'redux-form';
 import { connect, DefaultRootState } from 'react-redux';
-import { FormComponent } from '../components';
+import FormComponent from '../components/Form/Form';
 
 const selector = formValueSelector('paymentForm');
 

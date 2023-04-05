@@ -6,7 +6,7 @@ interface IProps {
   isHover: boolean
 }
 
-export const PortalModal: React.FC<IProps> = ({ isOpen, isHover }) => {
+const PortalModal: React.FC<IProps> = ({ isOpen, isHover }) => {
   if (!isHover && !isOpen) return null;
 
   const modalRoot = document.getElementById('modal-root');
@@ -19,3 +19,5 @@ export const PortalModal: React.FC<IProps> = ({ isOpen, isHover }) => {
     modalRoot || document.body,
   );
 };
+
+export default PortalModal;

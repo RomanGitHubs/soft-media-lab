@@ -4,10 +4,10 @@ import { Field } from 'redux-form';
 import infoIcon from '../../assets/info-icon.svg';
 import closeIcon from '../../assets/close-icon.svg';
 import { IFormProps } from '../../models/form';
-import { PortalModal } from '../PortalModal';
+import PortalModal from '../PortalModal/PortalModal';
 import { getCalculatedValue } from '../../helpers/getCalculatedValue';
 
-export const FormComponent: React.FC<IFormProps> = (props) => {
+const FormComponent: React.FC<IFormProps> = (props) => {
   const { handleSubmit, change, paymentViewValue, ndflValue, amountValue } = props;
 
   const [isHover, setHover] = useState(false);
@@ -138,3 +138,5 @@ export const FormComponent: React.FC<IFormProps> = (props) => {
     </form>
   );
 };
+
+export default FormComponent;
